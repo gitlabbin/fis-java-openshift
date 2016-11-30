@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <pluginGroups>
+  </pluginGroups>
+
+  <proxies>
+  </proxies>
+
+  <servers>
+    <server>
+			<id>OSE-API-releases</id>
+      <username>ci_build</username>
+      <password>{K9SVFuCy}</password>
+		</server>
+		<server>
+			<id>OSE-API-snapshots</id>
+      <username>ci_build</username>
+      <password>{bpr9PvWr}</password>
+		</server>
+  </servers>
+
+  <mirrors>
+    <mirror>
+      <id>public</id>
+      <name>Nexus Corp</name>
+      <url>http://nexus-cicd.openshift.schiphol.nl/nexus/content/groups/public</url>
+      <mirrorOf>central</mirrorOf>
+    </mirror>
+  </mirrors>
+
+  <profiles>
+    <profile>
+    			<id>nexus</id>
+    			<activation>
+    				<activeByDefault>true</activeByDefault>
+    			</activation>
+    			<repositories>
+    				<repository>
+    					<id>public</id>
+    					<name>public</name>
+    					<url>http://nexus-cicd.openshift.schiphol.nl/nexus/content/groups/public/</url>
+    				</repository>
+    				<repository>
+    					<id>OSE-API-releases</id>
+    					<name>OSE-API-releases</name>
+    					<url>http://nexus-cicd.openshift.schiphol.nl/nexus/content/repositories/OSE-API-Releases/</url>
+    					<snapshots>
+    						<enabled>false</enabled>
+    					</snapshots>
+    				</repository>
+    				<repository>
+    					<id>RedHat-GA</id>
+    					<name>RedHat-GA</name>
+    					<url>http://nexus-cicd.openshift.schiphol.nl/nexus/content/repositories/RedHat-GA/</url>
+    				</repository>
+    				<repository>
+    					<id>Fusesource-EA</id>
+    					<name>Fusesource-EA</name>
+    					<url>http://nexus-cicd.openshift.schiphol.nl/nexus/content/repositories/Fusesource-EA/</url>
+    				</repository>
+    				<repository>
+    					<id>Fusesource-m2</id>
+    					<name>Fusesource-m2</name>
+    					<url>http://nexus-cicd.openshift.schiphol.nl/nexus/content/repositories/Fusesource-m2/</url>
+    				</repository>
+    				<repository>
+    					<id>JBoss</id>
+    					<name>JBoss</name>
+    					<url>http://nexus-cicd.openshift.schiphol.nl/nexus/content/repositories/JBoss/</url>
+    				</repository>
+    				<repository>
+    					<id>JBoss-CE</id>
+    					<name>JBoss-CE</name>
+    					<url>http://nexus-cicd.openshift.schiphol.nl/nexus/content/repositories/JBoss-CE/</url>
+    				</repository>
+    			</repositories>
+    			<pluginRepositories>
+    				<pluginRepository>
+    					<id>public</id>
+    					<name>public</name>
+    					<url>http://nexus-cicd.openshift.schiphol.nl/nexus/content/groups/public/</url>
+    				</pluginRepository>
+    				<pluginRepository>
+    					<id>RedHat-GA</id>
+    					<name>RedHat-GA</name>
+    					<url>http://nexus-cicd.openshift.schiphol.nl/nexus/content/repositories/RedHat-GA/</url>
+    				</pluginRepository>
+    				<pluginRepository>
+    					<id>Fusesource-EA</id>
+    					<name>Fusesource-EA</name>
+    					<url>http://nexus-cicd.openshift.schiphol.nl/nexus/content/repositories/Fusesource-EA/</url>
+    				</pluginRepository>
+    				<pluginRepository>
+    					<id>Fusesource-m2</id>
+    					<name>Fusesource-m2</name>
+    					<url>http://nexus-cicd.openshift.schiphol.nl/nexus/content/repositories/Fusesource-m2/</url>
+    				</pluginRepository>
+    				<pluginRepository>
+    					<id>JBoss</id>
+    					<name>JBoss</name>
+    					<url>http://nexus-cicd.openshift.schiphol.nl/nexus/content/repositories/JBoss/</url>
+    				</pluginRepository>
+    				<pluginRepository>
+    					<id>JBoss-CE</id>
+    					<name>JBoss-CE</name>
+    					<url>http://nexus-cicd.openshift.schiphol.nl/nexus/content/repositories/JBoss-CE/</url>
+    				</pluginRepository>
+    			</pluginRepositories>
+    		</profile>
+  </profiles>
+
+</settings>
